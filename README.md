@@ -95,7 +95,7 @@ import axios from 'axios';
 import apiURL from '../api';
 
 export function getCustomerList() {
-  axios.get( apiURL ).then( response => response.data );
+  return axios.get( apiURL ).then( response => response.data );
 }
 ```
 </details>
@@ -208,15 +208,11 @@ import axios from 'axios';
 import apiURL from './api';
 
 export const getCustomerList = function() {
-  return axios.get(apiURL).then(response => {
-    return response.data;
-  })
+  return axios.get(apiURL).then(response =>response.data)
 }
 
 export const postCustomer = function(customer) {
-  return axios.post(apiURL, customer).then(response => {
-    return response.data;
-  })
+  return axios.post(apiURL, customer).then(response => response.data)
 }
 ```
 
@@ -549,22 +545,16 @@ In this step, we'll update the customer list to become a navigation list that wi
 import axios from 'axios';
 import apiURL from './api';
 
-export const getCustomerList = function() {
-  return axios.get(apiURL).then(response => {
-    return response.data;
-  })
+export function getCustomerList() {
+  return axios.get(apiURL).then(response => response.data)
 }
 
 export const getCustomer = function(id) {
-  return axios.get(apiURL+id).then(response => {
-    return response.data;
-  })
+  return axios.get(apiURL+id).then(response => response.data)
 }
 
 export const postCustomer = function(customer) {
-  return axios.post(apiURL, customer).then(response => {
-    return response.data;
-  })
+  return axios.post(apiURL, customer).then(response => response.data)
 }
 
 ```
@@ -754,27 +744,19 @@ import axios from 'axios';
 import apiURL from './api';
 
 export const getCustomerList = function() {
-  return axios.get(apiURL).then(response => {
-    return response.data;
-  })
+  return axios.get(apiURL).then(response => response.data)
 }
 
 export const getCustomer = function(id) {
-  return axios.get(apiURL+id).then(response => {
-    return response.data;
-  })
+  return axios.get(apiURL+id).then(response => response.data)
 }
 
 export const postCustomer = function(customer) {
-  return axios.post(apiURL, customer).then(response => {
-    return response.data;
-  })
+  return axios.post(apiURL, customer).then(response => response.data)
 }
 
 export const updateCustomer = function(id, obj) {
-  return axios.patch(apiURL + id, obj).then(response => {
-    return response.data;
-  })
+  return axios.patch(apiURL + id, obj).then(response => response.data)
 }
 ```
 
@@ -1120,33 +1102,23 @@ import axios from 'axios';
 import apiURL from './api';
 
 export const getCustomerList = function() {
-  return axios.get(apiURL).then(response => {
-    return response.data;
-  })
+  return axios.get(apiURL).then(response => response.data)
 }
 
 export const getCustomer = function(id) {
-  return axios.get(apiURL+id).then(response => {
-    return response.data;
-  })
+  return axios.get(apiURL+id).then(response => response.data)
 }
 
 export const postCustomer = function(customer) {
-  return axios.post(apiURL, customer).then(response => {
-    return response.data;
-  })
+  return axios.post(apiURL, customer).then(response => response.data)
 }
 
 export const updateCustomer = function(id, obj) {
-  return axios.patch(apiURL + id, obj).then(response => {
-    return response.data;
-  })
+  return axios.patch(apiURL + id, obj).then(response => response.data)
 }
 
 export const deleteCustomer = function(id) {
-  return axios.delete(apiURL + id).then(response => {
-    return response.data;
-  })
+  return axios.delete(apiURL + id).then(response => response.data)
 }
 ```
 
